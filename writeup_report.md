@@ -15,7 +15,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./model.png "Model Visualization"
-[image3]: ./trainig.png "Model Training"
+[image2]: ./training.png "Model Training"
 
 #### 1. Submission includes all required files and can be used to run the simulator in autonomous mode
 
