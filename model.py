@@ -74,10 +74,10 @@ def create_model(params):
     Create the model
     '''
     model = Sequential()
-    # Normalize the data
-    model.add(Lambda(lambda x: (x / 127.5) - 1.0, input_shape=params['input_shape']))
     # Crop 70 pixels from the top of the image and 25 from the bottom
     model.add(Cropping2D(cropping=((70, 25), (0, 0)), input_shape=params['input_shape']))
+    # Normalize the data
+    model.add(Lambda(lambda x: (x / 127.5) - 1.0, input_shape=params['input_shape']))
     # Conv layer 1
     model.add(Convolution2D(params['filter_size'], params['initial_conv2d_row'], params['initial_conv2d_col'], subsample=params['initial_subsample'], border_mode=params['border_mode']))
     model.add(ELU())
